@@ -97,24 +97,24 @@ const products = [
   }
 ]
 
-// Seleccionamos elementos del DOM
+
 const productList = document.querySelector('.product-grid')
 const categoryFilter = document.getElementById('category-filter')
 const searchInput = document.getElementById('search-input')
 const searchForm = document.querySelector('.search-bar')
 
-// Nuevo: contenedor del carrito (asegúrate que existe en tu HTML)
+
 const cartList = document.querySelector('.cart-items')
 const cartCount = document.querySelector('.cart-count')
 
-// Estado actual de filtros
+
 let currentCategory = 'all'
 let currentSearch = ''
 
-// Nuevo: estado del carrito
+
 let cart = []
 
-// Cargar carrito desde localStorage si existe
+
 function loadCart() {
   const savedCart = localStorage.getItem('cart')
   if (savedCart) {
@@ -122,12 +122,12 @@ function loadCart() {
   }
 }
 
-// Guardar carrito en localStorage
+
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart))
 }
 
-// Renderizar carrito en DOM
+
 function renderCart() {
   if (!cartList) return
 
@@ -155,7 +155,7 @@ function renderCart() {
 
   if (cartCount) cartCount.textContent = cart.length.toString()
 
-  // Añadir evento para eliminar producto
+
   const removeButtons = cartList.querySelectorAll('.remove-btn')
   removeButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -167,7 +167,7 @@ function renderCart() {
   })
 }
 
-// Función que pinta los productos filtrados
+
 function renderProducts(filterCategory = 'all', searchQuery = '') {
   productList.innerHTML = ''
 
@@ -206,7 +206,7 @@ function renderProducts(filterCategory = 'all', searchQuery = '') {
     productList.appendChild(li)
   })
 
-  // Añadir evento a botones "Añadir al carrito"
+
   const addButtons = productList.querySelectorAll('.add-to-cart-btn')
   addButtons.forEach((btn) => {
     btn.addEventListener('click', (e) => {
@@ -221,12 +221,12 @@ function renderProducts(filterCategory = 'all', searchQuery = '') {
   })
 }
 
-// Evita que el formulario haga submit y recargue la página
+
 if (searchForm) {
   searchForm.addEventListener('submit', (e) => e.preventDefault())
 }
 
-// Evento para cambiar el filtro por categoría
+
 if (categoryFilter) {
   categoryFilter.addEventListener('change', (e) => {
     currentCategory = e.target.value
@@ -236,7 +236,7 @@ if (categoryFilter) {
   console.warn('No se encontró el elemento con id category-filter')
 }
 
-// Evento para actualizar búsqueda en vivo
+
 if (searchInput) {
   searchInput.addEventListener('input', (e) => {
     currentSearch = e.target.value
@@ -246,7 +246,8 @@ if (searchInput) {
   console.warn('No se encontró el input con id search-input')
 }
 
-// Inicialización
+
 loadCart()
 renderProducts()
 renderCart()
+
