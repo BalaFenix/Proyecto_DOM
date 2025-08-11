@@ -138,7 +138,7 @@ body {
   outline: none;
 }
 
-/* Alineación y espaciado para el filtro de categoría */
+
 .category-filter-label {
   display: flex;
   flex-direction: column;
@@ -195,21 +195,21 @@ body {
   box-sizing: border-box;
 }
 .add-to-cart-btn {
-  background-color: #fff; /* fondo blanco */
-  color: #ff6f00; /* texto naranja */
-  border: 2px solid #ff6f00; /* borde naranja */
+  background-color: #fff; 
+  color: #ff6f00;
+  border: 2px solid #ff6f00; 
   padding: 0.5rem 1.2rem;
   border-radius: 4px;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: none; /* sin sombra para que quede limpio */
+  box-shadow: none; 
 }
 
 .add-to-cart-btn:hover {
-  background-color: #ff6f00; /* fondo naranja al pasar ratón */
-  color: #fff; /* texto blanco al pasar ratón */
+  background-color: #ff6f00; 
+  color: #fff; 
 }
 
 /* Tarjetas de producto */
@@ -312,7 +312,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background-color: #0072bc; /* o el color que uses */
+  background-color: #0072bc; 
   color: white;
   border: none;
   padding: 0.4rem 0.8rem;
@@ -351,7 +351,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Para evitar superposición logo y h1 en móvil */
+ 
   .brand {
     justify-content: flex-start;
     gap: 10px;
@@ -367,7 +367,7 @@ body {
     white-space: normal;
   }
 
-  /* Nav bar se adapta mejor */
+ 
   .nav {
     flex-wrap: wrap;
   }
@@ -515,8 +515,9 @@ body {
   color: #bbb;
 }
 
-/* espacio a la derecha en las tarjetas */
+
 .products .container {
   padding-right: 30px;
   box-sizing: border-box;
 }
+
