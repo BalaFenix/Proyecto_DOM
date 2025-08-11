@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PC componentes, laptops, ordenador sobremesa, CPU, tarjetas gráficas, tecnología"
+    />
+    <link rel="icon" href="./assets/favicon.png" />
+    <title>PC Componentes - Ofertas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <p>Envío gratis | Garantía | Contacto</p>
+    </div>
+
+    <header class="header">
+      <div class="container">
+        <div class="brand">
+          <img
+            src="./assets/Logo-pccomponentes.jpg"
+            alt="PC Componentes Logo"
+            class="logo"
+          />
+          <h1>PC Componentes</h1>
+        </div>
+        <div class="nav-bar">
+          <nav class="nav">
+            <a href="#"
+              ><img src="./assets/menu.png" alt="Todas las categorias" /> Todas
+              las categorías</a
+            >
+            <a href="#"
+              ><img src="./assets/micuenta.png" alt="Mi cuenta" /> Mi cuenta</a
+            >
+            <!-- Botón para abrir el carrito -->
+            <button
+              id="cart-button"
+              class="cart-button"
+              aria-label="Abrir carrito"
+            >
+              <img src="./assets/logocarro.png" alt="Carrito" />
+              <span id="cart-count" class="cart-count">0</span>
+              Mi cesta
+            </button>
+          </nav>
+          <form class="search-bar">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Buscar productos..."
+            />
+            <button type="submit">🔍</button>
+          </form>
+        </div>
+      </div>
+    </header>
+
+    <!-- Panel lateral del carrito -->
+    <aside id="cart-panel" class="cart-panel hidden">
+      <div class="cart-header">
+        <h3>Tu carrito</h3>
+        <button id="cart-close" aria-label="Cerrar carrito">&times;</button>
+      </div>
+      <ul id="cart-items" class="cart-items">
+        <!-- Aquí se añadirán los productos del carrito desde JS -->
+      </ul>
+      <div class="cart-footer">
+        <p>Total: <span id="cart-total">0,00 €</span></p>
+        <button id="checkout-button" class="btn">Finalizar compra</button>
+      </div>
+    </aside>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Ofertas de enero</h1>
+            <p>¡Lo que realmente cuesta es resistirse a estos precios!</p>
+            <a href="#" class="btn">Ver ofertas</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="products">
+        <div class="container">
+          <h2>¡Consigue las ofertas más TOP del momento!</h2>
+          <!-- Aquí añadimos el filtro de categorías -->
+          <div class="category-filter-label">
+            <label for="category-filter">Filtrar por categoría:</label>
+            <select id="category-filter" class="category-filter">
+              <option value="all">Todas</option>
+              <option value="portatil">Portátiles</option>
+              <option value="procesador">Procesadores</option>
+              <option value="tablet">Tablets</option>
+              <option value="grafica">Tarjetas gráficas</option>
+              <option value="televisor">Televisores</option>
+              <option value="telefono">Teléfonos</option>
+              <option value="aspiradora">Aspiradoras</option>
+              <option value="reloj">Relojes</option>
+              <option value="auriculares">Auriculares</option>
+              <option value="consola">Consolas</option>
+              <option value="raton">Ratones</option>
+            </select>
+          </div>
+          <ul class="product-grid">
+            <!-- Aquí no hay productos estáticos para que los genere JS -->
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-section">
+          <h4>PC Componentes</h4>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#">Trabaja con nosotros</a></li>
+            <li><a href="#">Nuestras tiendas</a></li>
+            <li><a href="#">Afiliados</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Atención al cliente</h4>
+          <ul>
+            <li><a href="#">Centro de ayuda</a></li>
+            <li><a href="#">Garantías y devoluciones</a></li>
+            <li><a href="#">Formas de pago</a></li>
+            <li><a href="#">Seguimiento de pedidos</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4>Para empresas</h4>
+          <ul>
+            <li><a href="#">PC Empresas</a></li>
+            <li><a href="#">Educación</a></li>
+            <li><a href="#">Canal distribución</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section newsletter">
+          <h4>Suscríbete al boletín</h4>
+          <p>Recibe las mejores ofertas y novedades.</p>
+          <form class="newsletter-form">
+            <input type="email" placeholder="Tu correo electrónico" required />
+            <button type="submit">Suscribirme</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 PC Componentes. Todos los derechos reservados.</p>
+        <p>
+          <a href="#">Política de privacidad</a> | <a href="#">Aviso legal</a> |
+          <a href="#">Cookies</a>
+        </p>
+      </div>
+    </footer>
+    <script src="main.js"></script>
+  </body>
+</html>
